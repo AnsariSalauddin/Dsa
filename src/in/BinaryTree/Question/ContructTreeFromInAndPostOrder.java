@@ -1,5 +1,7 @@
 package in.BinaryTree.Question;
 
+import java.util.HashMap;
+
 public class ContructTreeFromInAndPostOrder {
     static int index;
     public static int findPositionInPreOrder(int[] in,int elment,int size){
@@ -9,6 +11,14 @@ public class ContructTreeFromInAndPostOrder {
             }
         }
         return -1;
+    }
+    public static void Occurence(HashMap<Integer,Integer> occ,int[] inOrd){
+        if(occ.isEmpty()){
+            return;
+        }
+        for (int i=0; i<inOrd.length; i++){
+            occ.put(inOrd[i],i);
+        }
     }
     public static Node constructNode(int[] in,int[] post, int inStart, int inEnd, int size){
         if(index < 0 || inStart>inEnd){
