@@ -10,12 +10,26 @@ public class SearchElementInBST {
         }
         if(element==node.data){
             return true;
-        }
-        if (node.data > element) {
+        } else  if (node.data > element) {
             return searchElementInbinaryTree(node.left, element);
         } else {
             return searchElementInbinaryTree(node.right, element);
         }
+    }
+
+    //Search Using iterative
+    public static boolean searchElementUsingIterative(Node root, int x){
+        Node temp=root;
+        while (temp!=null){
+            if(temp.data==x){
+                return true;
+            }else  if(temp.data>x){
+                temp=temp.left;
+            }else {
+                temp=temp.right;
+            }
+        }
+        return false;
     }
     public static void main(String[] args) {
         Node node=new Node(40);
@@ -29,6 +43,8 @@ public class SearchElementInBST {
 
         boolean b = searchElementInbinaryTree(node, 50);
         System.out.println(b);
+        boolean b1 = searchElementUsingIterative(node, 50);
+        System.out.println(b1);
 
     }
 }
