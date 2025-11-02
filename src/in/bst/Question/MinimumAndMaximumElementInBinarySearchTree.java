@@ -14,6 +14,13 @@ public class MinimumAndMaximumElementInBinarySearchTree {
         }
         return temp.data;
     }
+    public static  int minimumValueelement(Node root){
+        Node temp=root;
+        while (temp.left!=null){
+            temp=temp.left;
+        }
+        return temp.data;
+    }
     //using recursive
     public static Node maximumElementUsingRecursive(Node root){
 //        if(root==null){
@@ -38,5 +45,6 @@ public class MinimumAndMaximumElementInBinarySearchTree {
         System.out.println(i);
         Node node = maximumElementUsingRecursive(root);
         System.out.println(node.data);
+        System.out.println(minimumValueelement(root));
     }
 }
