@@ -14,6 +14,19 @@ public class ValidatedBST {
         }
         return false;
     }
+    public boolean inOrderTraversal(Node root,int[] prev){
+        if(root==null){
+            return true;
+        }
+        if(!inOrderTraversal(root.left,prev)){
+            return false;
+        }
+        if(prev[0]>=root.data){
+            return false;
+        }
+        prev[0]=root.data;
+        return inOrderTraversal(root.right,prev);
+    }
     public static void main(String[] args) {
         Node node=new Node(4);
         node.left=new Node(2);
