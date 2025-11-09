@@ -28,6 +28,7 @@ public class ValidatedBST {
         return inOrderTraversal(root.right,prev);
     }
     public static void main(String[] args) {
+        ValidatedBST validatedBST=new ValidatedBST();
         Node node=new Node(4);
         node.left=new Node(2);
         node.left.left=new Node(1);
@@ -37,5 +38,8 @@ public class ValidatedBST {
         node.right.right=new Node(7);
         boolean b = checkValidBST(node, Integer.MIN_VALUE, Integer.MAX_VALUE);
         System.out.println(b);
+        boolean b1 = validatedBST.inOrderTraversal(node, new int[]{Integer.MIN_VALUE});
+        System.out.println(b1);
+
     }
 }
