@@ -4,18 +4,22 @@ public class FindCyclicPointLinkedList {
     public static int detectCyclicInLinkedList(Node head) {
         Node slow = head;
         Node fast = head;
+        Boolean isCyclic=false;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {
-                slow = head;
-                while (slow != fast) {
-                    slow = slow.next;
-                    fast = fast.next;
-                    if (slow == fast) {
-                        return slow.data;
-                    }
-                }
+                isCyclic=true;
+                break;
+            }
+        }
+        if(!isCyclic)return -1;
+        slow = head;
+        while (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+            if (slow == fast) {
+                return slow.data;
             }
         }
         return -1;
