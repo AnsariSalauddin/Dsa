@@ -1,5 +1,7 @@
 package in.LinkedList.Question;
 
+import in.LinkedList.Question.easy.Node;
+
 public class FindCyclicPointLinkedList {
     public static int detectCyclicInLinkedList(Node head) {
         Node slow = head;

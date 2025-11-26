@@ -8,6 +8,7 @@ class Node {
         this.next=null;
     }
 }
+
 public class ReverseLinkedList {
     public static void traverseForwor(Node node){
         Node temp=node;

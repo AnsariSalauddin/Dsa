@@ -1,5 +1,7 @@
 package in.LinkedList.Question;
 
+import in.LinkedList.Question.easy.Node;
+
 public class FindMiddleElementLinkedList {
     public static int middleElementLinkedList(Node node){
         Node slow=node;

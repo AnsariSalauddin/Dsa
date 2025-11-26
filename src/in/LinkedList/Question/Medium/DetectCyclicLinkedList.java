@@ -1,5 +1,7 @@
 package in.LinkedList.Question;
 
+import in.LinkedList.Question.easy.Node;
+
 public class DetectCyclicLinkedList {
     public static boolean detectCyclicInLinkedList(Node head){
         Node slow=head;
@@ -19,6 +21,7 @@ public class DetectCyclicLinkedList {
         node.next.next=new Node(3);
         node.next.next.next=new Node(4);
         node.next.next.next.next=new Node(5);
+        node.next.next.next.next.next=node.next.next;
         boolean b = detectCyclicInLinkedList(node);
         System.out.println(b);
 
