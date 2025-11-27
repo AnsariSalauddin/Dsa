@@ -1,6 +1,4 @@
-package in.LinkedList.Question;
-
-import in.LinkedList.Question.easy.Node;
+package in.LinkedList.Question.Medium;
 
 public class FindCyclicPointLinkedList {
     public static int detectCyclicInLinkedList(Node head) {
